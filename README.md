@@ -32,11 +32,20 @@ each cell by its boid's speed. As the flock moves, the cells shift and reshape w
 |:-------------------------------------------------:|:-------------------------------------------------:|
 | ![voronoiboids-1](screenshots/voronoiboids-1.png) | ![voronoiboids-2](screenshots/voronoiboids-2.png) |
 
+## Side by Side
+
+The third program runs a single flock and shows it both ways at once: the boids on the left half of the window and
+their Voronoi cells on the right. Each boid sits at the same spot in both halves, so the two views can be compared
+directly. Where the boids crowd together their cells are small, and in the gaps between groups the cells grow large.
+
+![sidebyside-1](screenshots/sidebyside-1.png)
+
 ## Running
 
 ```bash
 ./gradlew run                                                           # boids
 ./gradlew run -Popenrndr.application=voronoiboids.VoronoiFlockingKt     # Voronoi boids
+./gradlew run -Popenrndr.application=sidebyside.SideBySideKt            # side by side
 ```
 
-Click anywhere in the window to add more boids at the cursor.
+Click anywhere in the window to add more boids at the cursor. In the side-by-side program they appear in both halves.

@@ -1,9 +1,7 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-Project background, screenshots and run instructions for humans are in `README.md`; this file is for working on the
-code.
+Project background, screenshots and run instructions for humans are in `README.md`; this file is exclusivity for  
+Claude Code.
 
 ## Commands
 
@@ -25,13 +23,13 @@ code.
 - Tests use JUnit 4 (`org.junit.Test`, `org.junit.Assert`).
 - `settings.gradle.kts` reads the OPENRNDR and ORX versions by regex from the `openrndr = "..."` and `orx = "..."` lines
   in `gradle/libs.versions.toml`. Keep those lines in that plain form.
-- Both programs `extend(Screenshots())`, which writes PNGs into `screenshots/`. `README.md` embeds files from there, so
+- All three programs `extend(Screenshots())`, which writes PNGs into `screenshots/`. `README.md` embeds files from there, so
   do not delete or rename them without checking the README.
 
 ## Behaviour not obvious from any one file
 
-- `voronoiboids/VoronoiFlocking.kt` gets Voronoi cells back in `flock.boids` order and `CellDrawer` pairs them with
-  boids by index, so nothing may reorder `flock.boids` between `flock.run` and drawing.
+- `voronoiboids/VoronoiFlocking.kt` and `sidebyside/SideBySide.kt` get Voronoi cells back in `flock.boids` order and
+  `CellDrawer` pairs them with boids by index, so nothing may reorder `flock.boids` between `flock.run` and drawing.
 - `Boid.align` and `Boid.cohesion` do no distance filtering; they trust the neighbour list. The query radius in `Flock`
   is therefore their radius, and changing it changes behaviour. Only `separate` filters again.
 - Boids update in place in sequence, so later boids see earlier boids' new state, while the `KDTree` holds
