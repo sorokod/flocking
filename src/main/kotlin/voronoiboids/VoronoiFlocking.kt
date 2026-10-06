@@ -84,7 +84,7 @@ class CellDrawer {
  */
 fun main() = application {
 
-    val initialBoidCount = 300
+    val initialBoidCount = 600
 
     configure {
         width = 800
@@ -135,7 +135,7 @@ fun main() = application {
                 fill = null
                 stroke = BLACK
                 strokeWeight = 1.0
-                contours(cells.filter { !it.empty })
+                lineLoops(cells.filter { !it.empty }.map { c -> c.segments.map { it.start } })
             }
         }
     }
