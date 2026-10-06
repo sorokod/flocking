@@ -13,3 +13,4 @@ ShaderError.glsl
 !gradle/
 !gradlew
 !gradlew.bat
+!video

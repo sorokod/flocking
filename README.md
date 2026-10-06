@@ -40,6 +40,14 @@ directly. Where the boids crowd together their cells are small, and in the gaps 
 
 ![sidebyside-1](screenshots/sidebyside-1.png)
 
+
+... and a sample video:
+
+https://github.com/user-attachments/assets/80cd25c9-5cbc-447e-bcc7-c0c424be5764
+
+
+
+
 ## Running
 
 ```bash
