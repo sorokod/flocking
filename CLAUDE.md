@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Project background, screenshots and run instructions for humans are in `README.md`; this file is exclusivity for  
+Project background, screenshots and run instructions for humans are in `README.md`; this file is exclusively for  
 Claude Code.
 
 ## Commands

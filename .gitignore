@@ -10,3 +10,6 @@ gui-parameters/
 ffmpegOutput.txt
 ShaderError.glsl
 
+!gradle/
+!gradlew
+!gradlew.bat
